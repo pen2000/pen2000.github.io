@@ -2,6 +2,7 @@ body{
   background-image: url("../img/linedpaper.png");
   color:black;
   text-align: center;
+  font-family: sans-serif;
 }
 
 /*ネットで見つけたもの。<img class="shadow" src="‾" />で使える*/
@@ -196,4 +197,36 @@ a:hover>figure figcaption {
 footer{
   font-size: 15px;
 	border-top: 1px dashed black;
+}
+
+
+/**************************************/
+
+/* スマートフォン対応用 */
+@media screen and (max-width: 480px) {
+
+  table {
+    width: 100%;
+  }
+
+  .box27 {
+    width: 90%;
+  }
+
+  .box27 p {
+      margin: 0;
+      padding: 0;
+      font-size:20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  /* ulを入れるボックス */
+  div.box {
+    width: 90%;
+    margin:  0 auto;
+  }
+
 }
