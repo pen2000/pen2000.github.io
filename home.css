@@ -47,10 +47,20 @@ h1 {
   border-bottom: 3px double #ccc;
   background-color: rgba(0,0,0,0.3);
   color: rgba(0,0,0,1);
+  height: 100px;
+
+  position: sticky;
+  top: 0px;
+  z-index: 100;
 }
+
 h1:first-letter {
   margin-right: .1em;
   font-size: 2.5em;
+}
+
+td {
+  text-align: left;
 }
 
 
@@ -61,6 +71,9 @@ h1:first-letter {
     border: solid 3px #62c1ce;
     background-color:white;
     display: inline-block;
+    position: sticky;
+    top: 120px;
+    z-index: 99;
 }
 .box27 .box-title {
     position: absolute;
@@ -209,6 +222,10 @@ footer{
 /* スマートフォン対応用 */
 @media screen and (max-width: 480px) {
 
+  h1 {
+    height: 90px;
+  }
+
   table {
     width: 100%;
   }
@@ -225,6 +242,10 @@ footer{
 
   p {
     font-size: 16px;
+  }
+
+  footer{
+    font-size: 10px;
   }
 
 }
