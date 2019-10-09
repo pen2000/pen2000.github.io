@@ -1,10 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* 全体の設定 */
 body{
   background-image: url("img/linedpaper.png");
-  color:black;
   text-align: center;
   animation: fadeIn 2s ease 0s 1 normal;
   -webkit-animation: fadeIn 2s ease 0s 1 normal;
-  font-family: sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN";
 }
 
 /*ネットで見つけたもの。<img class="shadow" src="‾" />で使える*/
@@ -12,68 +18,95 @@ body{
   box-shadow: 5px 10px 20px rgba(0,0,0,0.25);
 }
 
-/*
-.box24 {
-    position: relative;
-    padding: 0.5em 0.7em;
-    margin: 2em 0;
-    margin-bottom:50px;
-    background: #5c98d4;
-    color: #5c98d4;
-    font-weight: bold;
-    display: inline-block;
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
 }
-.box24:after {
-    position: absolute;
-    content: '';
-    top: 100%;
-    left: 30px;
-    border: 30px solid transparent;
-    border-top: 30px solid #5c98d4;
-    width: 0;
-    height: 0;
-}
-.box24 p {
-    margin: 0;
-    padding: 0;
-    font-size:80px;
-    color:white;
-}
-*/
 
 /* ページのタイトル用 */
-h1 {
-  padding-bottom: .5em;
-  border-bottom: 3px double #ccc;
-  background-color: rgba(0,0,0,0.3);
-  color: rgba(0,0,0,1);
-  height: 100px;
-
-  position: sticky;
-  top: 0px;
-  z-index: 100;
-}
-
-h1:first-letter {
-  margin-right: .1em;
-  font-size: 2.5em;
-}
-
-td {
+header {
+  background-color: rgba(179,179,179,0.8);
+  background-color: rgba(2,34,35,0.9);
+  height: 60px;
   text-align: left;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
+}
+
+header img {
+    width:auto;
+    height:90%;
+    padding-left:5px;
+    float: left;
+    backdrop-filter: blur(3px);
+}
+
+.header-list {
+  margin-right: 10px;
+}
+
+.header-list li {
+  list-style: none;
+  float: right;
+  line-height: 60px;
+  padding: 0 10px;
+  border-left: 1px solid gray;
+  /* background-color: black; */
+}
+
+.header-list a {
+  text-decoration: none;
+  color: white;
+}
+
+
+.works-wrapper table {
+  align="center"
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 0 auto;
+  border-collapse:collapse;
+
+  border: 5px solid red;
+}
+
+
+.works-wrapper tr {
+  flex: auto;
+  width: 50%;
+
+  border: 5px solid green;
+}
+
+.works-wrapper td {
+  text-align: left;
+
+  border: 5px solid blue;
 }
 
 
 .box27 {
     position: relative;
-    margin: 2em 0;
+    margin:  0;
     padding: 0.5em 1em;
-    border: solid 3px #62c1ce;
-    background-color:white;
-    display: inline-block;
+    /*border: solid 3px #62c1ce;*/
+    display: block;
+    position: -webkit-sticky;
     position: sticky;
-    top: 120px;
-    z-index: 99;
+    top: 60px;
+    z-index: 90;
+    background-color: #CAC190;
+    background-color: #79BD9A;
+    color: white;
 }
 .box27 .box-title {
     position: absolute;
@@ -93,7 +126,7 @@ td {
 .box27 p {
     margin: 0;
     padding: 0;
-    font-size:30px;
+    font-size:25px;
 }
 
 /*選択画像エフェクト用*/
@@ -109,6 +142,7 @@ img {
     transition:all 0.25s ease-in-out;
     width: 100px;
     vertical-align: bottom;
+    z-index: 98;
 }
 
 figure {
@@ -177,7 +211,7 @@ a:hover>figure figcaption {
 .button {
   position: relative;
   z-index: 2;
-  background-color: black;
+  background-color: #757575;
   border: 1px solid white;
   color: white;
   line-height: 50px;
@@ -197,9 +231,55 @@ a:hover>figure figcaption {
   transform: scale(.5);
 }
 .button:hover::after {
-  background: gray;
+  background: black;
   -webkit-transform: scale(1);
   transform: scale(1);
+}
+
+.privacy {
+  margin: 30px;
+}
+
+.top-wrapper {
+  padding-top: 140px;
+  padding-bottom: 100px;
+  z-index: 10;
+  color: white;
+  background-color: #4E6680;
+  background-image: url("img/everyday.JPG");
+}
+
+.top-wrapper h1 {
+  font-size: 40px;
+  padding: 0;
+  margin: 1px 0;
+  letter-spacing: 2px;
+}
+
+
+
+.top-wrapper p {
+  font-size: 16px
+  margin: 0;
+}
+
+.works-wrapper {
+  z-index: 1;
+  /* background-color: white; */
+  /*border: 5px solid red;*/
+}
+
+/* .works-wrapper table {
+  margin: 0 auto;
+  border-collapse:collapse;
+} */
+
+.works-wrapper a {
+  z-index: 1;
+}
+
+.contact-wrapper {
+  /* background-color: #D3D0B4; */
 }
 
 @keyframes fadeIn {
@@ -213,8 +293,11 @@ a:hover>figure figcaption {
 }
 
 footer{
-  font-size: 15px;
-	border-top: 1px dashed black;
+  height: 30px;
+  font-size: 10px;
+	border-top: 1px solid #ccc;
+  background-color: #022223;
+  background-color: #D3D0B4;
 }
 
 /**************************************/
@@ -222,8 +305,8 @@ footer{
 /* スマートフォン対応用 */
 @media screen and (max-width: 480px) {
 
-  h1 {
-    height: 90px;
+  header {
+    height: 60px;
   }
 
   table {
@@ -231,7 +314,7 @@ footer{
   }
 
   .box27 {
-    width: 90%;
+    width: 100%;
   }
 
   .box27 p {
