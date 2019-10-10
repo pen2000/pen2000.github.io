@@ -57,42 +57,22 @@ header img {
   list-style: none;
   float: right;
   line-height: 60px;
-  padding: 0 10px;
   border-left: 1px solid gray;
   /* background-color: black; */
 }
 
 .header-list a {
   text-decoration: none;
+  padding: 0 10px;
   color: white;
+  display: block;
+  transition: all 300ms 0s ease;
+
 }
 
-
-.works-wrapper table {
-  align="center"
-  display: flex;
-  flex-wrap: wrap;
-  width: 80%;
-  margin: 0 auto;
-  border-collapse:collapse;
-
-  border: 5px solid red;
+.header-list a:hover {
+  background-color: rgba(7, 95, 98, 1);
 }
-
-
-.works-wrapper tr {
-  flex: auto;
-  width: 50%;
-
-  border: 5px solid green;
-}
-
-.works-wrapper td {
-  text-align: left;
-
-  border: 5px solid blue;
-}
-
 
 .box27 {
     position: relative;
@@ -127,6 +107,10 @@ header img {
     margin: 0;
     padding: 0;
     font-size:25px;
+}
+
+.thumnail {
+  border-radius: 5px;
 }
 
 /*選択画像エフェクト用*/
@@ -256,26 +240,120 @@ a:hover>figure figcaption {
   letter-spacing: 2px;
 }
 
-
-
 .top-wrapper p {
   font-size: 16px
   margin: 0;
 }
 
 .works-wrapper {
-  z-index: 1;
-  /* background-color: white; */
-  /*border: 5px solid red;*/
+  background-color: #EFEFEF;
 }
 
-/* .works-wrapper table {
+.works-container {
+  width: 80%;
   margin: 0 auto;
-  border-collapse:collapse;
-} */
+  /* FlexBox用 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-.works-wrapper a {
-  z-index: 1;
+  /* border: 5px solid red; */
+}
+
+.work {
+  /* border: 1px solid gray; */
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #EFEFEF;
+  background-image: url("img/linedpaper.png");
+  border-radius: 8px;
+  box-shadow: 5px 5px gray;
+}
+
+.work a {
+  height: 100px;
+  margin: 10px;
+}
+
+.work p {
+  word-wrap: break-word;
+}
+
+.profile-wrapper {
+  background-color: #EFEFEF;
+}
+
+.profile-container {
+  padding: 30px 0;
+}
+
+.selfintroduce {
+  background-color: #4E6680;
+  width: 500px;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
+
+.selfintroduce-header {
+  display: flex;
+  justify-content: center;
+}
+
+.selfintroduce-header img {
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+.selfintroduce-header h3 {
+  display: flex;
+  justify-content: center;
+  line-height: 100px;
+}
+
+.selfintroduce p {
+  text-align: left;
+}
+
+.languages {
+  margin: 0 20px;
+  border: 5px solid red;
+  /* FlexBox */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.language {
+  margin: 10px;
+  padding: 5px;
+  border: 3px solid gray;
+}
+
+.language-left {
+  float: left;
+  width: 100px;
+}
+
+.language-left img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+.language-left h3 {
+  font-size: 16px;
+}
+
+.language-right {
+  float: left;
+  width: 300px;
+  text-align: left;
+  margin-left: 10px;
 }
 
 .contact-wrapper {
@@ -309,12 +387,8 @@ footer{
     height: 60px;
   }
 
-  table {
-    width: 100%;
-  }
-
-  .box27 {
-    width: 100%;
+  .work {
+    width: 90%;
   }
 
   .box27 p {
