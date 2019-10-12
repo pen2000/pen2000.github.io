@@ -9,6 +9,31 @@
     <title>T-Official</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <script src="https://kit.fontawesome.com/be722a7f94.js" crossorigin="anonymous"></script>
+
+    <!-- jQuery.jsの読み込み -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+
+    <!-- スムーズスクロール部分の記述 -->
+    <script>
+    $(function(){
+       // #で始まるアンカーをクリックした場合に処理
+       $('a[href^=#]').click(function() {
+          // ヘッダーの高さ
+          var adjust = 60;
+          // スクロールの速度
+          var speed = 400; // ミリ秒
+          // アンカーの値取得
+          var href= $(this).attr("href");
+          // 移動先を取得
+          var target = $(href == "#" || href == "" ? 'html' : href);
+          // 移動先を数値で取得
+          var position = target.offset().top - adjust;;
+          // スムーススクロール
+          $('body,html').animate({scrollTop:position}, speed, 'swing');
+          return false;
+       });
+    });
+    </script>
   </head>
 
   <body>
@@ -17,9 +42,9 @@
         <img src="img/logo-w.PNG" width="30px" height="10px" alt="logo">
         <div class="header-list">
           <ul>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Profile</a></li>
-            <li><a href="#">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#works">Works</a></li>
           </ul>
         </div>
     </header>
@@ -36,7 +61,7 @@
       </div>
     </div>
 
-    <div class="works-wrapper">
+    <div class="works-wrapper" id="works">
 
       <div class="box27">
         <p>Works</p>
@@ -54,8 +79,14 @@
               <figcaption>有給管理</figcaption>
             </figure>
           </a>
-          <p>有給休暇の管理ができるアプリです。<br>(iOS対応)<br>
-          sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
+          <p>有給休暇の管理ができるアプリです。<br>
+            【主な機能】<br>
+            ・有給をいつ使ったかが、一目で分かる<br>
+            ・有給付与日の管理ができる<br>
+            ・もうすぐで無効になる有給日数を表示<br>
+            ・ウィジェットに対応
+          </p>
+          <a href="#">iOS版はこちら</a>
         </div>
 
         <div class="work">
@@ -99,7 +130,7 @@
 
     </div>
 
-    <div class="profile-wrapper">
+    <div class="profile-wrapper" id="profile">
 
       <div class="box27">
         <p>Profile</p>
@@ -130,7 +161,7 @@
               <h3>Swift</h3>
             </div>
             <div class="language-right">
-              <p>完全独学で習得。半年ほどかけて、iPhone向けアプリの制作とリリースにこぎつけた。Optional型の概念がとても良い！</p>
+              <p>完全独学で習得。半年ほどかけて、iPhone向けアプリの制作とリリースに至る。</p>
             </div>
           </div>
 
@@ -170,7 +201,7 @@
               <h3>C++</h3>
             </div>
             <div class="language-right">
-              <p>短期間だが、業務で使った。今まで触れた言語の中で、ダントツで難しかった印象。</p>
+              <p>短期間だが、業務でC++を使用したアプリ開発を行った。苦手意識があるので、現在克服中。</p>
             </div>
           </div>
 
@@ -180,7 +211,7 @@
               <h3>VBA</h3>
             </div>
             <div class="language-right">
-              <p>Excelでテスト仕様書を大量に作成する業務をこなしていた頃、必要に駆られて習得。様々な自動化ツールを作成し、チームに貢献した（と思っている。）</p>
+              <p>Excelでテスト仕様書を大量に作成する業務をこなしていた頃、必要に駆られて習得。様々な自動化ツールを作成した。</p>
             </div>
           </div>
 
@@ -190,7 +221,7 @@
               <h3>HTML</h3>
             </div>
             <div class="language-right">
-              <p>初めて触れたのは新人研修の時。このページは、HTMLとCSSを手入力して作成しています。</p>
+              <p>初めて触れたのは新人研修の時。このページは、HTMLとCSSを手入力して作成している。</p>
             </div>
           </div>
 
@@ -200,7 +231,7 @@
               <h3>CSS</h3>
             </div>
             <div class="language-right">
-              <p>初めて触れたのは新人研修の時。このページは、HTMLとCSSを手入力して作成しています。</p>
+              <p>初めて触れたのは新人研修の時。このページは、HTMLとCSSを手入力して作成している。</p>
             </div>
           </div>
 
@@ -212,7 +243,7 @@
 
     </div>
 
-    <div class="contact-wrapper">
+    <div class="contact-wrapper" id="contact">
 
       <div class="box27">
         <p>Contact us</p>
@@ -227,9 +258,16 @@
     </div>
 
     <footer>
-    Copyright©Takumi Ono 2019
+    ©  2019  Takumi Ono
     </footer>
 
   </body>
 
 </html>
+
+<!--
+*** BitIcon license ***
+Copyright (c) 2015 Ben Hawker
+Released under the MIT license
+https://github.com/hwkr/BitIcon/blob/master/LICENSE
+-->

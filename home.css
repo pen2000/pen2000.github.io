@@ -12,6 +12,7 @@ body{
   animation: fadeIn 2s ease 0s 1 normal;
   -webkit-animation: fadeIn 2s ease 0s 1 normal;
   font-family: "Hiragino Kaku Gothic ProN";
+  font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Avenir,"Open Sans","Helvetica Neue",Helvetica,Arial,Verdana,Roboto,"游ゴシック","Yu Gothic","游ゴシック体",YuGothic,"Meiryo UI","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
 }
 
 /*ネットで見つけたもの。<img class="shadow" src="‾" />で使える*/
@@ -47,7 +48,6 @@ header img {
     height:90%;
     padding-left:5px;
     float: left;
-    backdrop-filter: blur(3px);
 }
 
 .header-list {
@@ -111,7 +111,7 @@ header img {
 }
 
 .thumnail {
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 /*選択画像エフェクト用*/
@@ -280,6 +280,11 @@ a:hover>figure figcaption {
 
 }
 
+.work h2 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
 .work a {
   height: 100px;
   margin: 10px;
@@ -287,6 +292,9 @@ a:hover>figure figcaption {
 
 .work p {
   word-wrap: break-word;
+  font-size: 15px;
+  text-align: left;
+  background-color: #EFEFEF;
 }
 
 .profile-wrapper {
@@ -329,6 +337,7 @@ a:hover>figure figcaption {
 .selfintroduce p {
   text-align: center;
   padding: 5px;
+  font-size: 15px;
 }
 
 .profile-wrapper h2 {
@@ -341,7 +350,7 @@ a:hover>figure figcaption {
   margin: 30px auto;
   padding-top: 10px;
   padding-bottom:20px;
-  width: 80%;
+  width: 90%;
   border-radius: 10px;
   background-color: white;
 }
@@ -396,8 +405,7 @@ a:hover>figure figcaption {
 }
 
 .language-right p {
-
-
+  font-size: 15px;
 }
 
 .contact-wrapper {
