@@ -246,6 +246,7 @@ a.thumnail {
   padding: 5px;
   text-align: left;
   background-color: #EFEFEF;
+  border-radius: 3px;
 }
 
 .work a {
@@ -256,6 +257,7 @@ a.thumnail {
   margin-top: 10px;
   text-decoration: none;
   transition:all 0.25s ease-in-out;
+  border-radius: 3px;
 }
 
 .work a:hover {
@@ -319,8 +321,14 @@ a.thumnail {
   padding-top: 10px;
   padding-bottom:20px;
   width: 90%;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   background-color: white;
+  box-shadow: 3px 3px gray;
+}
+
+.languages-wrapper h2 {
+  font-weight: normal;
+  font-size: 20px;
 }
 
 .languages {
@@ -336,14 +344,13 @@ a.thumnail {
   margin: 10px;
   padding: 10px;
   width: 390px;
-  background-color: rgba(230, 153, 32, 1);
   border-radius: 10px;
-  box-shadow: 3px 3px gray;
 
   display: flex;
   align-items: center;
 
   background-color: rgba(252, 180, 67, 1);
+  background-color: rgba(249, 184, 70, 1);
 }
 
 .language-left {
@@ -454,6 +461,10 @@ footer{
 
   .selfintroduce p {
     font-size: 14px;
+  }
+
+  .language {
+    margin: 6px;
   }
 
   .language-left i {
