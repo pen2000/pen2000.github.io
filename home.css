@@ -1,10 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* 全体の設定 */
 body{
-  background-image: url("img/linedpaper.png");
-  color:black;
+  /* background-image: url("img/linedpaper.png"); */
+  background-color: #EFEFEF;
   text-align: center;
   animation: fadeIn 2s ease 0s 1 normal;
   -webkit-animation: fadeIn 2s ease 0s 1 normal;
-  font-family: sans-serif;
+  font-family: "Hiragino Kaku Gothic ProN";
+  font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Avenir,"Open Sans","Helvetica Neue",Helvetica,Arial,Verdana,Roboto,"游ゴシック","Yu Gothic","游ゴシック体",YuGothic,"Meiryo UI","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
 }
 
 /*ネットで見つけたもの。<img class="shadow" src="‾" />で使える*/
@@ -12,68 +20,74 @@ body{
   box-shadow: 5px 10px 20px rgba(0,0,0,0.25);
 }
 
-/*
-.box24 {
-    position: relative;
-    padding: 0.5em 0.7em;
-    margin: 2em 0;
-    margin-bottom:50px;
-    background: #5c98d4;
-    color: #5c98d4;
-    font-weight: bold;
-    display: inline-block;
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
 }
-.box24:after {
-    position: absolute;
-    content: '';
-    top: 100%;
-    left: 30px;
-    border: 30px solid transparent;
-    border-top: 30px solid #5c98d4;
-    width: 0;
-    height: 0;
-}
-.box24 p {
-    margin: 0;
-    padding: 0;
-    font-size:80px;
-    color:white;
-}
-*/
 
 /* ページのタイトル用 */
-h1 {
-  padding-bottom: .5em;
-  border-bottom: 3px double #ccc;
-  background-color: rgba(0,0,0,0.3);
-  color: rgba(0,0,0,1);
-  height: 100px;
-
-  position: sticky;
-  top: 0px;
-  z-index: 100;
-}
-
-h1:first-letter {
-  margin-right: .1em;
-  font-size: 2.5em;
-}
-
-td {
+header {
+  background-color: rgba(179,179,179,0.8);
+  background-color: rgba(2,34,35,0.9);
+  height: 60px;
   text-align: left;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+
 }
 
+header img {
+    width:auto;
+    height:90%;
+    padding-left:5px;
+    float: left;
+}
+
+.header-list {
+  margin-right: 10px;
+}
+
+.header-list li {
+  list-style: none;
+  float: right;
+  line-height: 60px;
+  border-left: 1px solid gray;
+  /* background-color: black; */
+}
+
+.header-list a {
+  text-decoration: none;
+  padding: 0 10px;
+  color: white;
+  display: block;
+  transition: all 300ms 0s ease;
+
+}
+
+.header-list a:hover {
+  background-color: rgba(7, 95, 98, 1);
+}
 
 .box27 {
     position: relative;
-    margin: 2em 0;
+    margin:  0;
     padding: 0.5em 1em;
-    border: solid 3px #62c1ce;
-    background-color:white;
-    display: inline-block;
+    /*border: solid 3px #62c1ce;*/
+    display: block;
+    position: -webkit-sticky;
     position: sticky;
-    top: 120px;
-    z-index: 99;
+    top: 60px;
+    z-index: 90;
+    background-color: #CAC190;
+    background-color: #79BD9A;
+    color: white;
 }
 .box27 .box-title {
     position: absolute;
@@ -85,7 +99,7 @@ td {
     line-height: 25px;
     vertical-align: middle;
     font-size: 20px;
-    background: #62c1ce;
+    /* background: #62c1ce; */
     color: #ffffff;
     font-weight: bold;
     border-radius: 5px 5px 0 0;
@@ -93,7 +107,11 @@ td {
 .box27 p {
     margin: 0;
     padding: 0;
-    font-size:30px;
+    font-size:25px;
+}
+
+.thumnail {
+  border-radius: 10px;
 }
 
 /*選択画像エフェクト用*/
@@ -109,6 +127,7 @@ img {
     transition:all 0.25s ease-in-out;
     width: 100px;
     vertical-align: bottom;
+    z-index: 98;
 }
 
 figure {
@@ -177,7 +196,7 @@ a:hover>figure figcaption {
 .button {
   position: relative;
   z-index: 2;
-  background-color: black;
+  background-color: #757575;
   border: 1px solid white;
   color: white;
   line-height: 50px;
@@ -197,9 +216,201 @@ a:hover>figure figcaption {
   transform: scale(.5);
 }
 .button:hover::after {
-  background: gray;
+  background: black;
   -webkit-transform: scale(1);
   transform: scale(1);
+}
+
+.privacy {
+  margin: 30px;
+}
+
+.top-wrapper {
+  padding-top: 140px;
+  padding-bottom: 100px;
+  z-index: 10;
+  color: rgba(255, 255, 255, 0.9);
+  background-image: url("img/everyday.JPG");
+}
+
+.top-wrapper h1 {
+  font-size: 40px;
+  padding: 0;
+  margin: 1px 0;
+  letter-spacing: 2px;
+  /* アニメーション */
+  animation-name: fadeIn-top;
+  animation-duration: 2s;
+}
+
+.top-wrapper p {
+  font-size: 16px;
+  margin: 0;
+  /* アニメーション */
+  animation-name: fadeIn-top;
+  animation-duration: 4s;
+}
+
+.works-wrapper {
+  background-color: #EFEFEF;
+  background-color: rgba(244, 243, 241, 1);
+}
+
+.works-container {
+  width: 80%;
+  margin: 0 auto;
+  /* FlexBox用 */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  /* border: 5px solid red; */
+}
+
+.work {
+  /* border: 1px solid gray; */
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #EFEFEF;
+  /* background-image: url("img/linedpaper.png"); */
+  background-color: white;
+  /* border-radius: 8px; */
+  box-shadow: 4px 4px gray;
+
+}
+
+.work h2 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+.work a {
+  height: 100px;
+  margin: 10px;
+}
+
+.work p {
+  word-wrap: break-word;
+  font-size: 15px;
+  text-align: left;
+  background-color: #EFEFEF;
+}
+
+.profile-wrapper {
+  background-color: #EFEFEF;
+}
+
+.profile-container {
+  padding: 30px 0;
+}
+
+.selfintroduce {
+  background-color: #4E6680;
+  max-width: 500px;
+  width: 85%;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 10px;
+  color: white;
+}
+
+.selfintroduce-header {
+  display: flex;
+  justify-content: center;
+}
+
+.selfintroduce-header img {
+  height: 100px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  z-index: 1;
+}
+
+.selfintroduce-header h3 {
+  display: flex;
+  justify-content: center;
+  line-height: 100px;
+}
+
+.selfintroduce p {
+  text-align: center;
+  padding: 5px;
+  font-size: 15px;
+}
+
+.profile-wrapper h2 {
+  font-size: 20px;
+  margin-bottom: 5px;
+
+}
+
+.languages-wrapper {
+  margin: 30px auto;
+  padding-top: 10px;
+  padding-bottom:20px;
+  width: 90%;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.languages {
+  margin: 0 ;
+  /* FlexBox */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.language {
+  margin: 10px;
+  padding: 10px;
+  width: 390px;
+  /* border: 3px solid gray; */
+  background-color: rgba(230, 153, 32, 1);
+  border-radius: 10px;
+  box-shadow: 3px 3px gray;
+
+  display: flex;
+  align-items: center;
+
+  background-color: rgba(224, 160, 59, 1);
+}
+
+.language-left {
+  /* float: left; */
+  width: 20%;
+  height: 100%;
+  /* background-color: gray; */
+}
+
+.language-left i {
+  color: white;
+  font-size: 80px;
+  border-bottom: 1px solid white;
+}
+
+.language-left h3 {
+  font-size: 16px;
+  color: white;
+}
+
+.language-right {
+  /* float: left; */
+  width: 80%;
+  text-align: left;
+  padding-left: 15px;
+}
+
+.language-right p {
+  font-size: 15px;
+}
+
+.contact-wrapper {
+  /* background-color: #D3D0B4; */
+  background-image: url("img/linedpaper.png");
 }
 
 @keyframes fadeIn {
@@ -212,9 +423,26 @@ a:hover>figure figcaption {
     100% {opacity: 1}
 }
 
+@keyframes fadeIn-top {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 0.9;
+      transform: translateY(0);
+  }
+}
+
 footer{
-  font-size: 15px;
-	border-top: 1px dashed black;
+  height: 30px;
+  font-size: 10px;
+	border-top: 1px solid #ccc;
+  background-color: #022223;
+  background-color: #D3D0B4;
+  background-color: rgba(74,72,71,1);
+  color: white;
+  padding-top: 10px;
 }
 
 /**************************************/
@@ -222,15 +450,15 @@ footer{
 /* スマートフォン対応用 */
 @media screen and (max-width: 480px) {
 
-  h1 {
-    height: 90px;
+  header {
+    height: 60px;
   }
 
-  table {
-    width: 100%;
+  .header-list {
+    display: none;
   }
 
-  .box27 {
+  .work {
     width: 90%;
   }
 
@@ -242,6 +470,18 @@ footer{
 
   p {
     font-size: 16px;
+  }
+
+  .language-left i {
+    font-size: 60px;
+  }
+
+  .language-left h3 {
+    font-size: 16px;
+  }
+
+  .language-right p {
+    font-size: 14px;
   }
 
   footer{
