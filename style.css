@@ -110,17 +110,6 @@ header img {
     font-size:25px;
 }
 
-.thumnail {
-  border-radius: 10px;
-}
-
-/*選択画像エフェクト用*/
-a.thumnail {
-    display: inline-block;
-    overflow: hidden;
-    width: 100px;
-}
-
 .button {
   display: inline-block;
   width: 200px;
@@ -384,7 +373,26 @@ a.thumnail {
 
 .contact-wrapper {
   /* background-color: #D3D0B4; */
-  background-image: url("img/linedpaper.png");
+  background-color: #EFEFEF;
+}
+
+.contact-container {
+  margin: 40px;
+}
+
+.contact-container a {
+  background-color: rgba(244, 38, 38, 0.8);
+  color: white;
+  padding: 10px;
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  transition:all 0.25s ease-in-out;
+  border-radius: 3px;
+}
+
+.contact-container a:hover {
+  background-color: rgba(244, 38, 38, 1);
 }
 
 @keyframes fadeIn {
