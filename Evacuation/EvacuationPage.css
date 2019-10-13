@@ -25,6 +25,7 @@ body{
   padding: 20px;
   box-shadow: 5px 5px gray;
   max-width: 400px;
+  animation: fluffy1 3s ease;
 }
 
 .sorry-wrapper img {
@@ -34,4 +35,15 @@ body{
 
 .sorry-wrapper h2 {
   border-bottom: 2px dashed gray;
+}
+
+@keyframes fluffy1 {
+  0% { transform:translateY(0) }
+  5% { transform:translateY(0) }
+  10% { transform:translateY(0) }
+  20% { transform:translateY(-15px) }
+  25% { transform:translateY(0) }
+  30% { transform:translateY(-15px) }
+  50% { transform:translateY(0) }
+  100% { transform:translateY(0) }
 }
