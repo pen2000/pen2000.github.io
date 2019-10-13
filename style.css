@@ -380,7 +380,7 @@ header img {
 }
 
 .contact-container {
-  margin: 40px;
+  margin: 35px 15px;
 }
 
 .contact-container a {
@@ -500,6 +500,10 @@ footer{
   }
 
   .language-right p {
+    font-size: 14px;
+  }
+
+  .contact-container p {
     font-size: 14px;
   }
 
