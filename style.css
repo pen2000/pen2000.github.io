@@ -440,8 +440,8 @@ footer{
   }
 
   header img {
-      line-height: 60px;
-      width: 130px;
+      height: 80%;
+      padding-top: 5px;
   }
 
   .header-list {
