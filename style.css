@@ -218,7 +218,7 @@ header img {
   padding: 10px;
   background-color: #EFEFEF;
   background-color: white;
-  box-shadow: 4px 4px gray;
+  box-shadow: 4px 4px 4px -1px gray;
 }
 
 .work h2 {
@@ -315,7 +315,7 @@ header img {
   width: 90%;
   /* border-radius: 10px; */
   background-color: white;
-  box-shadow: 3px 3px gray;
+  box-shadow: 3px 3px 3px -1px gray;
 }
 
 .languages-wrapper h2 {
