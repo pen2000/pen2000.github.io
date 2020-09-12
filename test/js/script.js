@@ -3,7 +3,7 @@ $(function () {
   $('.top-str').t({
     speed: 80,
     speed_vary: false,
-    delay: 0.5,
+    delay: 1.0,
     blink: true
   });
 });
@@ -17,9 +17,11 @@ $(function () {
     document.getElementById("works").style.visibility = "visible";
     document.getElementById("profile").style.visibility = "visible";
     document.getElementById("contact").style.visibility = "visible";
+    // document.getElementById("top-wrapper").style.width = '100px';
+    document.getElementById("top-wrapper").style.height = '50px';
     scrollAppear();
   } 
-  setTimeout(showDiv, 2000);
+  setTimeout(showDiv, 2500);
 });
 
 // スムーススクロール
