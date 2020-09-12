@@ -6,6 +6,7 @@
 
 html {
   -webkit-overflow-scrolling: touch;
+  height: 100%;
 }
 
 body{
@@ -16,6 +17,8 @@ body{
   -webkit-animation: fadeIn 2s ease 0s 1 normal;
   font-family: "Hiragino Kaku Gothic ProN";
   font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro",Avenir,"Open Sans","Helvetica Neue",Helvetica,Arial,Verdana,Roboto,"游ゴシック","Yu Gothic","游ゴシック体",YuGothic,"Meiryo UI","メイリオ",Meiryo,"ＭＳ Ｐゴシック","MS PGothic",sans-serif;
+  height: 100%;
+
 }
 
 .container{
@@ -51,7 +54,7 @@ header > .container {
 
 .logo {
   color: #000000;
-  font-family: 'Roman';
+  /* font-family: 'Roman'; */
   font-weight: 800;
   font-size: 2rem;
   line-height: 3.5rem;
@@ -80,7 +83,6 @@ footer{
 }
 
 .header-list {
-  margin-right: 10px;
   margin-left:auto;
 }
 
@@ -103,12 +105,17 @@ footer{
 }
 
 .top-wrapper {
-  /* height: 150px; */
-  /* margin-bottom: 50px; */
+  background: white; 
+  width: 100%; 
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .top-str {
   font-size: 4rem;
+  color: white;
 }
 
 .title {
@@ -185,43 +192,3 @@ footer{
   transform: rotate(-180deg);
 }
 /* スクロールフェードイン ここまで*/
-
-
-/**************************************/
-
-/* スマートフォン対応用 */
-@media screen and (max-width: 800px) {
-
-  html {
-    font-size: 80%;
-}
-
-main {
-  margin-top: 80px;
-  margin-bottom: 50px;
-}
-
-  .header-list {
-    display: none;
-  }
-
-  .container{
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-  }
-
-  .top-str {
-    font-size: 2.5rem;
-  }
-  
-  main > .container {
-    background-color: #FFFFFF;
-    padding: 0 1rem;
-  }
-
-  footer p {
-    font-size: 8px;
-  }
-
-}
