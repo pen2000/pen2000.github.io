@@ -63,8 +63,9 @@ main > .container > div {
 }
 
 main {
-  margin-top: 100px;
+  margin-top: 6rem;
   margin-bottom: 50px;
+  overflow: hidden;
 }
 
 footer{
@@ -103,13 +104,11 @@ footer{
 
 .top-wrapper {
   /* height: 150px; */
-  border-radius: 2rem;
   /* margin-bottom: 50px; */
 }
 
 .top-str {
   font-size: 4rem;
-  /* text-align: left; */
 }
 
 .title {
@@ -186,3 +185,43 @@ footer{
   transform: rotate(-180deg);
 }
 /* スクロールフェードイン ここまで*/
+
+
+/**************************************/
+
+/* スマートフォン対応用 */
+@media screen and (max-width: 800px) {
+
+  html {
+    font-size: 80%;
+}
+
+main {
+  margin-top: 80px;
+  margin-bottom: 50px;
+}
+
+  .header-list {
+    display: none;
+  }
+
+  .container{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .top-str {
+    font-size: 2.5rem;
+  }
+  
+  main > .container {
+    background-color: #FFFFFF;
+    padding: 0 1rem;
+  }
+
+  footer p {
+    font-size: 8px;
+  }
+
+}
