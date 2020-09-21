@@ -39,13 +39,16 @@ header {
   text-align: left;
 
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 0;
   right: 0;
   z-index: 100;
 
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
+
+  transform: translateY(-100px);
+  transition: all 600ms 0s ease-out;
 }
 
 header > .container {
@@ -159,6 +162,10 @@ footer{
 
 .contact-wrapper {
   margin-bottom: 300px;
+}
+
+.name-wrapper > img {
+  width: 150px;
 }
 
 /* スクロールフェードイン ここから*/

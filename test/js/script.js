@@ -10,15 +10,21 @@ $(function () {
 
 // タイプ風アニメーションに合わせて要素の追加・削除
 $(function () {
+  document.getElementById("top-wrapper").style.paddingTop = "0";
+  // document.getElementById("header").style.visibility = "hidden";
+  // document.getElementById("header").style.transform = 'translate(0, -100px)';
   document.getElementById("works").style.visibility = "hidden";
   document.getElementById("profile").style.visibility = "hidden";
   document.getElementById("contact").style.visibility = "hidden";
   var showDiv = function(){
+    document.getElementById("top-wrapper").style.paddingTop = "6rem";
+    document.getElementById("header").style.visibility = "visible";
     document.getElementById("works").style.visibility = "visible";
     document.getElementById("profile").style.visibility = "visible";
     document.getElementById("contact").style.visibility = "visible";
     // document.getElementById("top-wrapper").style.width = '100px';
     document.getElementById("top-wrapper").style.height = '50px';
+    document.getElementById("header").style.transform = 'translate(0, 0px)';
     scrollAppear();
   } 
   setTimeout(showDiv, 2500);
