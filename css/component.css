@@ -144,6 +144,14 @@ body {
 }
 
 @media screen and (max-width: 47.2em) {
+
+    .timeline {
+        width: 100%;
+        max-width: 69em;
+        margin: 0 auto;
+        padding: 10px 20px;
+    }
+
     .cbp_tmtimeline:before {
         display: none;
     }
