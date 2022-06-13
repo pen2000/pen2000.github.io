@@ -98,7 +98,8 @@ header nav ul li a:hover, header nav ul li a:active {
   background-color: #eee;
 }
 
-.menu ul, .menu ol {
+.menu ul,
+.menu ol {
   margin: 0;
   padding: 0;
   font-size: 14px;
@@ -107,7 +108,8 @@ header nav ul li a:hover, header nav ul li a:active {
   *zoom: 1;
 }
 
-.menu ul:after, .menu ol:after {
+.menu ul:after,
+.menu ol:after {
   content: "";
   display: block;
   clear: both;
@@ -257,5 +259,47 @@ footer p {
   .about .sentence {
     text-align: left;
   }
+}
+
+/* fadeUp */
+.fadeUp {
+  -webkit-animation-name: fadeUpAnime;
+          animation-name: fadeUpAnime;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadeUpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+.fadeUpTrigger {
+  opacity: 0;
 }
 /*# sourceMappingURL=style.css.map */
