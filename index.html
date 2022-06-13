@@ -21,6 +21,12 @@
     <script src="js/modernizr.custom.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/fade.js"></script>
+    <script>
+        $(function(){
+            var style = '<link rel="stylesheet" href="fade.css">';
+            $('head link:last').after(style);
+        });
+        </script>
 </head>
 
 <body>
