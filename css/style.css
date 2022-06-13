@@ -237,6 +237,7 @@ footer p {
   }
   header .logo {
     height: 30px;
+    padding-right: 3px;
   }
   header nav {
     display: none;
