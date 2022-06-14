@@ -79,6 +79,7 @@
 
 /*========= ボタンのためのCSS ===============*/
 .openbtn1 {
+    display: none;
     position: fixed;
     z-index: 9999;
     /*ボタンを最前面に*/
@@ -129,4 +130,10 @@
     left: 18px;
     transform: translateY(-6px) rotate(45deg);
     width: 30%;
+}
+
+@media screen and (max-width: 47.2em) {
+    .openbtn1 {
+        display: block;
+    }
 }
