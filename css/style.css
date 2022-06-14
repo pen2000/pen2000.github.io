@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   margin: 0;
-  font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
+  font-family: 'Lato', 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
   padding: 90px 0px;
   background-color: #fefefe;
 }
@@ -128,6 +128,7 @@ header nav ul li a:hover, header nav ul li a:active {
 
 .container > .section-header {
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .container > .section-header > h1 {
