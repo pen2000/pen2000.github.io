@@ -17,16 +17,17 @@
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/navigation.css">
     <script src="vendor/jquery-3.6.0.min.js"></script>
     <script src="js/modernizr.custom.js"></script>
     <script src="js/scroll.js"></script>
     <script src="js/fade.js"></script>
     <script>
-        $(function(){
+        $(function () {
             var style = '<link rel="stylesheet" href="css/fade.css">';
             $('head link:last').after(style);
         });
-        </script>
+    </script>
 </head>
 
 <body>
@@ -42,6 +43,18 @@
             </ul>
         </nav>
     </header>
+
+    <div class="openbtn1"><span></span><span></span><span></span></div>
+    <nav id="g-nav">
+        <div id="g-nav-list">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#works">Works</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="container fadeUpTrigger" id="about">
         <div class="section-header">
@@ -238,6 +251,7 @@
         <p>© 2022 Ono Takumi</p>
     </footer>
 
+    <script src="js/navigation.js"></script>
 </body>
 
 </html>
