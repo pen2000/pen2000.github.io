@@ -7,8 +7,11 @@ body {
     background-color: #fefefe;
 }
 
-/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+/* スクロールをしたら出現する要素にはじめに透過0を指定 */
 .fadeUpTrigger {
+    opacity: 0;
+}
+.box {
     opacity: 0;
 }
 
